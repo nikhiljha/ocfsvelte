@@ -1,0 +1,7 @@
+{
+    "files.exclude": {
+        "__sapper__": true,
+        "node_modules/": true,
+        "src/node_modules/": true
+    }
+}
