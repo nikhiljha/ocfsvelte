@@ -3,30 +3,39 @@
 // Import a Google Font
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
 
-/*
-// Set your brand colors
-$purple: #8A4D76;
-$pink: #FA7C91;
-$brown: #757763;
-$beige-light: #D0D1CD;
-$beige-lighter: #EFF0EB;
+// Berkeley Primary Palette
+$berkeley-blue: #003262;
+$founders-rock: #3B7EA1;
+$california-gold: #FDB515;
+$medalist: #C4820E;
+
+// Berkeley Secondary Palette
+$wellman-tile: #D9661F;
+$rose-garden: #EE1F60;
+$golden-gate: #ED4E33;
+$south-hall: #6C3302;
+$bay-fog: #DDD5C7;
+$lawrence: #00B0DA;
+$lap-lane: #00A598;
+$pacific: #46535E;
+$sather-gate: #B9D3B6;
+$ion: #CFDD45;
+$soybean: #859438;
+$stone-pine: #584F29;
 
 // Update Bulma's global variables
 $family-sans-serif: "Nunito", sans-serif;
-$grey-dark: $brown;
-$grey-light: $beige-light;
-$primary: $purple;
-$link: $pink;
-$widescreen-enabled: false;
-$fullhd-enabled: false;
+$primary: $berkeley-blue;
+$widescreen-enabled: true;
+$fullhd-enabled: true;
 
 // Update some of Bulma's component variables
-$body-background-color: $beige-lighter;
-$control-border-width: 2px;
-$input-border-color: transparent;
-$input-shadow: none;
+// $body-background-color: $beige-lighter;
+// $control-border-width: 2px;
+// $input-border-color: transparent;
+// $input-shadow: none;
 
-// Import only what you need from Bulma
+/* TODO: Import selectively, we don't need all of Bulma.
 @import "../../node_modules/bulma/sass/utilities/_all.sass";
 @import "../../node_modules/bulma/sass/base/_all.sass";
 @import "../../node_modules/bulma/sass/elements/button.sass";
@@ -39,3 +48,5 @@ $input-shadow: none;
 */
 
 @import "../../node_modules/bulma/bulma.sass";
+// This doubles the amount of color work... have to consider it + reimplement it.
+// @import "../../node_modules/bulma-prefers-dark/bulma-prefers-dark.sass";

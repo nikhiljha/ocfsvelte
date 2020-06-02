@@ -1,6 +1,7 @@
 <script>
 	export let segment;
-	let expanded = false;
+  let expanded = false;
+  let signedin = false;
 
 	function toggleHamburger() {
 		expanded = !expanded;
@@ -15,7 +16,7 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a aria-current='{ariaCurrent(undefined)}' class="navbar-item" href="/">
-      <img alt="penguin wearing a blue and yellow scarf" src="OCF-Penguin.svg" height="28">
+      <img alt="penguin wearing a blue and yellow scarf" src="logo-text.png" height="28">
     </a>
 
     <div role="button" class="navbar-burger burger {expanded ? "is-active" : ""}" aria-label="menu" aria-expanded={expanded} on:click={toggleHamburger} data-target="mainNav">
@@ -43,12 +44,18 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
+          {#if signedin}
+          <a class="button is-primary" href="/account/dashboard">
+            <strong>Dashboard</strong>
+          </a>
+          {:else}
           <a class="button is-primary" href="/account/register">
-            <strong>Join</strong>
+            <strong>Create Account</strong>
           </a>
           <a class="button is-light" href="/account/login">
             Sign In
           </a>
+          {/if}
         </div>
       </div>
     </div>
